@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+    color: #fff;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+}
+.main{
+    height: 88vh;
+    width: 100%;
+    background: #222;
+    display: flex;
+    align-items: flex-end;
+    padding: 5vw 10vw;
+}
+.left{
+    height: 100%;
+    width: 45%;
+    background-position: top;
+    background-size: cover;
+}
+.right{
+    height: 100%;
+    width: 55%;
+    /* border: 1px solid #ddd; */
+    padding: 1.5vw 3vw;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.main-right h1{
+    font-size: 4vw;
+    width: 90%;
+    margin-top: 3vw;
+}
+.main-right h3{
+    margin-top: 1vw;
+    display: inline;
+    position: relative;
+}
+.main-right h3::after{
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    height: 2px;
+    width: 0;
+    left: 0;
+    background: #ddd;
+    transition: .4s ease;
+}
+.main-right h3:hover::after{
+    width: 100%;
+}
+.active-song{
+    background: linear-gradient(90deg, rgba(50, 205, 50, 0.662), rgba(0, 60, 128, 0.585));
+}
+.all-songs{
+    margin-top: 1vw;
+}
+.song{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 2vw;
+    border-bottom: 1px solid #777;
+    padding: .5vw;
+    margin-bottom: .5vw;
+    cursor: pointer;
+}
+.song img{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    object-position: center;
+    pointer-events: none;
+}
+.song h5{
+    font-size: .8rem;
+    font-weight: 400;
+    pointer-events: none;
+}
+.player{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 12vh;
+    background: #111;
+    gap: 2vw;
+}
+.player h2{
+    width: 3vw;
+    height: 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #444;
+    border-radius: 50%;
+    transition: .2s ease;
+    cursor: pointer;
+}
+.player h2 i{
+    font-size: 1rem;
+}
+.player h2:active{
+    scale: .9;
+}
+.player h2:hover{
+    background: #666;
+}
